@@ -8,13 +8,25 @@ $(document).ready(function(){
             content.addClass("open")
         }
     })
-    var audio = document.getElementById('audio');
-    if(audio){
-    audio.addEventListener('ended', function() {
-        this.currentTime = 0;
-        this.play();
-    }, false);
-        audio.play()
+
+
+    document.getElementById('audiobutton').onclick = function()
+  	{
+        var audio = document.getElementById('audio');
+        var au = $("#audio");
+        if(au.hasClass("play")){
+          audio.pause();
+        au.removeClass("play");
+            }
+          else{
+        au.addClass("play");
+            audio.play();
     }
+    }
+
+
+
 })
+
+
 

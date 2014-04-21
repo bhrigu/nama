@@ -58,6 +58,7 @@ body {
       width: 46%;
       padding: 0 0 0 2em;
       margin-right: -2em;
+      margin-bottom: -2em;
       position: relative;
       border-radius: 3px;
       background-color: wheat; }
@@ -69,12 +70,12 @@ body {
       .line .word .block .arrow-e,
       .line .word .block .arrow-w {
         /*
-         * In Internet Explorer, The"border-style: dashed" will never be
-         * rendered unless "(width * 5) >= border-width" is true.
-         * Since "width" is set to "0", the "dashed-border" remains
-         * invisible to the user, which renders the border just like how
-         * "border-color: transparent" renders.
-         */
+* In Internet Explorer, The"border-style: dashed" will never be
+* rendered unless "(width * 5) >= border-width" is true.
+* Since "width" is set to "0", the "dashed-border" remains
+* invisible to the user, which renders the border just like how
+* "border-color: transparent" renders.
+*/
         border-style: dashed;
         border-color: transparent;
         border-width: 0.53em;
@@ -91,7 +92,8 @@ body {
         border-right-width: 1em;
         border-right-style: solid;
         border-right-color: wheat;
-        right: 4.2em; }
+        right: 4.2em;
+        top: 0.75em; }
     .line .word:nth-child(even) .block {
       float: left;
       background-color: wheat;
@@ -101,10 +103,16 @@ body {
         border-left-width: 1em;
         border-left-style: solid;
         border-left-color: wheat;
-        left: 1.65em; }
+        left: 1.65em;
+        top: 0.75em; }
     .line .word h2.title {
       font-size: 1.0em;
-      color: gray; }
+      color: gray;
+      left: -1em;
+      position: relative;
+      top: -2em; }
     .line .word .item {
       font-size: 1.15714em;
-      color: darkgrey; }
+      color: darkgrey;
+      position: relative;
+      top: -1.7em; }

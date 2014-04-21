@@ -26,9 +26,9 @@ body{
 
 }
 .description{
-.title{
-  font-size: 1.4em;
-  text-align: center; }
+  .title{
+    font-size: 1.4em;
+    text-align: center; }
   color: papayawhip;
   .intro{
     padding: $gap;
@@ -39,105 +39,113 @@ body{
     padding: 5px;
   }
 }
-  .main{}
+.main{}
 
-  .line{
-    width: 10px;
-    margin: 75px auto;
-    position: relative;
-    background: #ffffff;
-    .top,.bottom{
-      position: absolute;
-      left: -16px;
-      z-index: 2;
-      width: 43px;
-      height: 88px;
-      background: yellowgreen;
-    }
-    .top{
-      top: -72px;
-      background: url("../img/sprite.png") no-repeat 0 0 transparent;
+.line{
+  width: 10px;
+  margin: 75px auto;
+  position: relative;
+  background: #ffffff;
+  .top,.bottom{
+    position: absolute;
+    left: -16px;
+    z-index: 2;
+    width: 43px;
+    height: 88px;
+    background: yellowgreen;
+  }
+  .top{
+    top: -72px;
+    background: url("../img/sprite.png") no-repeat 0 0 transparent;
 
-    }
-    .bottom{
-      background: url("../img/sprite.png") no-repeat scroll -46px 0 transparent;
-      bottom: 30;
-      clear: both;
-    }
-    .word{
-      overflow: hidden;
-      margin-top: 2*$gap;
-      margin-left: -23.75em;
-      width: $width;
+  }
+  .bottom{
+    background: url("../img/sprite.png") no-repeat scroll -46px 0 transparent;
+    bottom: 30;
+    clear: both;
+  }
+  .word{
+    overflow: hidden;
+    margin-top: 2*$gap;
+    margin-left: -23.75em;
+    width: $width;
 
-      .block{
-        float: right;
-        width: 46%;
-        padding: 0 0 0 2*$gap;
-        margin-right: -2*$gap;
-        position: relative;
-        border-radius: 3px;
-        background-color: wheat;
-        .item{max-height: 0;
+    .block{
+      float: right;
+      width: 46%;
+      padding: 0 0 0 2*$gap;
+      margin-right: -2*$gap;
+      margin-bottom: -2em;
+      position: relative;
+      border-radius: 3px;
+      background-color: wheat;
+      .item{max-height: 0;
         transition: 0.75s all ease;}
-        .item.open{max-height: 15em}
-        .arrow-e,
-        .arrow-w {
-          /*
-           * In Internet Explorer, The"border-style: dashed" will never be
-           * rendered unless "(width * 5) >= border-width" is true.
-           * Since "width" is set to "0", the "dashed-border" remains
-           * invisible to the user, which renders the border just like how
-           * "border-color: transparent" renders.
-           */
-          border-style: dashed;
-          border-color: transparent;
-          border-width: 0.53em;
-          display: -moz-inline-box;
-          display: inline-block;
-          /* Use font-size to control the size of the arrow. */
-          font-size: 12px;
-          height: 0;
-          line-height: 0;
-          position: relative;
-          vertical-align: middle;
-          width: 0;
-
-        }
-        .arrow-e {
-          border-right-width: 1em;
-          border-right-style: solid;
-          border-right-color: wheat;
-          right: 4.2em;
-        }
-      }
-
-
-      &:nth-child(even) .block{
-        float: left;
-        background-color: wheat;
-        padding: 0 0.1*$gap 0 0;
-        text-align: right;
-        .arrow-w {
-          border-left-width: 1em;
-          border-left-style: solid;
-          border-left-color: wheat;
-          left: 1.65em;
-        }
+      .item.open{max-height: 15em}
+      .arrow-e,
+      .arrow-w {
+        /*
+* In Internet Explorer, The"border-style: dashed" will never be
+* rendered unless "(width * 5) >= border-width" is true.
+* Since "width" is set to "0", the "dashed-border" remains
+* invisible to the user, which renders the border just like how
+* "border-color: transparent" renders.
+*/
+        border-style: dashed;
+        border-color: transparent;
+        border-width: 0.53em;
+        display: -moz-inline-box;
+        display: inline-block;
+        /* Use font-size to control the size of the arrow. */
+        font-size: 12px;
+        height: 0;
+        line-height: 0;
+        position: relative;
+        vertical-align: middle;
+        width: 0;
 
       }
+      .arrow-e {
+        border-right-width: 1em;
+        border-right-style: solid;
+        border-right-color: wheat;
+        right: 4.2em;
+        top: 0.75em;
+      }
+    }
+
+
+    &:nth-child(even) .block{
+      float: left;
+      background-color: wheat;
+      padding: 0 0.1*$gap 0 0;
+      text-align: right;
+      .arrow-w {
+        border-left-width: 1em;
+        border-left-style: solid;
+        border-left-color: wheat;
+        left: 1.65em;
+        top:0.75em;
+      }
+
+    }
 
     h2.title{
       font-size: 1.0em;
-     // border-bottom: 0.025em dashed yellow;
+      // border-bottom: 0.025em dashed yellow;
       color: gray;
+      left: -1em;
+      position: relative;
+      top: -2em;
     }
     .item{
       font-size: 1.15714em;
       color: darkgrey;
+      position: relative;
+      top: -1.7em;
 
 
 
     }
   }
-  }
+}
