@@ -1,33 +1,38 @@
-div {
-  outline: 1px solid red; }
-
 body {
   background-image: url("../img/wall.jpg");
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Bookman Old Style', serif; }
 
 .wrapper {
   width: 48em;
   margin: 0 auto;
   color: grey;
-  font-size: 1.02em; }
+  font-size: 1.05em; }
 
 .header .logo {
-  width: 20%;
-  margin: 0 auto; }
+  border: 2px solid #CFDEFF;
+  border-radius: 96% 35%;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 20%; }
   .header .logo img {
     max-width: 100%; }
 
-.description {
+.description .title, .description .intro {
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.2), 1px 1px 1px rgba(255, 255, 255, 0.2), 1px 1px 1px rgba(0, 0, 0, 0.7); }
+.description .title {
+  font-size: 1.4em;
+  text-align: center;
   color: papayawhip; }
-  .description .title {
-    font-size: 1.4em;
-    text-align: center; }
-  .description .intro {
-    padding: 1em;
-    text-align: center; }
-  .description .intro a {
-    color: antiquewhite;
-    padding: 5px; }
+.description .intro {
+  padding: 1em;
+  text-align: center;
+  font-size: 16.63px; }
+.description .intro a {
+  color: antiquewhite;
+  padding: 5px; }
 
 .line {
   width: 10px;
@@ -45,9 +50,19 @@ body {
     top: -72px;
     background: url("../img/sprite.png") no-repeat 0 0 transparent; }
   .line .bottom {
-    background: url("../img/sprite.png") no-repeat scroll -46px 0 transparent;
+    background: url("../img/sprite.png") no-repeat scroll -45px 0 transparent;
     bottom: 30;
-    clear: both; }
+    clear: both;
+    left: -17px; }
+    .line .bottom .loadmore {
+      background-image: url("../img/loadmore.png");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      height: 33px;
+      left: -3.5em;
+      position: relative;
+      top: 5em;
+      width: 156px; }
   .line .word {
     overflow: hidden;
     margin-top: 2em;
@@ -56,11 +71,21 @@ body {
     .line .word .block {
       float: right;
       width: 46%;
-      padding: 0 0 0 2em;
-      margin-right: -2em;
+      padding: 0 0 0 0;
+      margin-right: 0;
+      margin-bottom: -2em;
       position: relative;
-      border-radius: 3px;
-      background-color: wheat; }
+      border-radius: 2px;
+      background-color: #ffffff; }
+      .line .word .block .plus {
+        height: 33px;
+        width: 33px;
+        background-image: url("../img/ok.png");
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        position: absolute;
+        top: 0.35em;
+        left: 0.5em; }
       .line .word .block .item {
         max-height: 0;
         transition: 0.75s all ease; }
@@ -69,12 +94,12 @@ body {
       .line .word .block .arrow-e,
       .line .word .block .arrow-w {
         /*
-         * In Internet Explorer, The"border-style: dashed" will never be
-         * rendered unless "(width * 5) >= border-width" is true.
-         * Since "width" is set to "0", the "dashed-border" remains
-         * invisible to the user, which renders the border just like how
-         * "border-color: transparent" renders.
-         */
+* In Internet Explorer, The"border-style: dashed" will never be
+* rendered unless "(width * 5) >= border-width" is true.
+* Since "width" is set to "0", the "dashed-border" remains
+* invisible to the user, which renders the border just like how
+* "border-color: transparent" renders.
+*/
         border-style: dashed;
         border-color: transparent;
         border-width: 0.53em;
@@ -90,21 +115,37 @@ body {
       .line .word .block .arrow-e {
         border-right-width: 1em;
         border-right-style: solid;
-        border-right-color: wheat;
-        right: 4.2em; }
+        border-right-color: #ffffff;
+        right: 1.5em;
+        top: 0.75em; }
     .line .word:nth-child(even) .block {
       float: left;
-      background-color: wheat;
       padding: 0 0.1em 0 0;
-      text-align: right; }
+      text-align: right;
+      background-position: top;
+      background-position: 310px 4px; }
+      .line .word:nth-child(even) .block .plus {
+        position: absolute;
+        left: 19.75em; }
       .line .word:nth-child(even) .block .arrow-w {
         border-left-width: 1em;
         border-left-style: solid;
-        border-left-color: wheat;
-        left: 1.65em; }
+        border-left-color: #ffffff;
+        left: 1.65em;
+        top: 0.75em; }
     .line .word h2.title {
       font-size: 1.0em;
-      color: gray; }
+      color: gray;
+      position: relative;
+      top: -1.6em;
+      text-align: center;
+      text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.2), 1px 1px 1px rgba(255, 255, 255, 0.2), 1px 1px 1px rgba(0, 0, 0, 0.7);
+      margin-left: 3em;
+      margin-right: 3em; }
     .line .word .item {
       font-size: 1.15714em;
-      color: darkgrey; }
+      color: gray;
+      position: relative;
+      top: -1.7em;
+      text-align: -moz-center;
+      text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.7); }

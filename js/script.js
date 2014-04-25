@@ -1,20 +1,31 @@
 $(document).ready(function(){
-    $(".block .title").on("click", function(){
-        var el  = $(this), content = el.next(".item");
-
+    $(".block .plus").on("click", function(){
+        var block = $(this).parents(".block"),
+            content = $(".item", block);
         if(content.hasClass("open")){
             content.removeClass("open")
         }else{
             content.addClass("open")
         }
     })
-    var audio = document.getElementById('audio');
-    if(audio){
-    audio.addEventListener('ended', function() {
-        this.currentTime = 0;
-        this.play();
-    }, false);
-        audio.play()
+
+    document.getElementById('audiobutton').onclick = function()
+  	{
+        var audio = document.getElementById('audio');
+        var au = $("#audio");
+        if(au.hasClass("play")){
+          audio.pause();
+        au.removeClass("play");
+            }
+          else{
+        au.addClass("play");
+            audio.play();
     }
+    }
+
+
+
 })
+
+
 

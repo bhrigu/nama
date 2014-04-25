@@ -1,11 +1,14 @@
 $width: 48em;
 $gap: 1em;
 div{
-  outline: 1px solid red;
+
 }
 body{
-  background-image: url('../img/wall.jpg');
-  background-attachment:fixed;
+  background-image: url("../img/wall.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Bookman Old Style', serif;
 
 }
 
@@ -13,131 +16,208 @@ body{
   width: $width;
   margin: 0 auto;
   color: grey;
-  font-size: 1.02em;
+  font-size: 1.05em;
+
 
 }
-.header{
-  .logo{
-    width: 20%;
-    margin: 0 auto;
-    img{max-width: 100%;
-    }
+.header .logo {
+  border: 2px solid #CFDEFF;
+  border-radius: 96% 35%;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 20%;
+  img{max-width: 100%;
   }
-
 }
+
+
+
 .description{
-.title{
-  font-size: 1.4em;
-  text-align: center; }
-  color: papayawhip;
+  .title, .intro{
+    text-shadow:-1px -1px 1px rgba(255,255,255,0.2), /* наверх и влево */
+    1px 1px 1px rgba(255,255,255,0.2), /* вниз и вправо */
+    1px 1px 1px rgba(0,0,0,0.7);
+
+  }
+  .title{
+    font-size: 1.4em;
+    text-align: center;
+    color: papayawhip;
+  }
   .intro{
     padding: $gap;
     text-align: center;
+
+    font-size: 16.63px;
+
+
   }
   .intro a{
     color: antiquewhite;
     padding: 5px;
   }
 }
-  .main{}
+.main{}
 
-  .line{
-    width: 10px;
-    margin: 75px auto;
-    position: relative;
-    background: #ffffff;
-    .top,.bottom{
-      position: absolute;
-      left: -16px;
-      z-index: 2;
-      width: 43px;
-      height: 88px;
-      background: yellowgreen;
-    }
-    .top{
-      top: -72px;
-      background: url("../img/sprite.png") no-repeat 0 0 transparent;
+.line{
+  width: 10px;
+  margin: 75px auto;
+  position: relative;
+  background: #ffffff;
+
+
+  .top,.bottom{
+    position: absolute;
+    left: -16px;
+    z-index: 2;
+    width: 43px;
+    height: 88px;
+    background: yellowgreen;
+  }
+  .top{
+    top: -72px;
+    background: url("../img/sprite.png") no-repeat 0 0 transparent;
+
+  }
+  .bottom{
+    background: url("../img/sprite.png") no-repeat scroll -45px 0 transparent;
+    bottom: 30;
+    clear: both;
+    left: -17px;
+    .loadmore{
+      background-image: url("../img/loadmore.png");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      height: 33px;
+      left: -3.5em;
+      position: relative;
+      top: 5em;
+      width: 156px;
 
     }
-    .bottom{
-      background: url("../img/sprite.png") no-repeat scroll -46px 0 transparent;
-      bottom: 30;
-      clear: both;
-    }
-    .word{
-      overflow: hidden;
-      margin-top: 2*$gap;
-      margin-left: -23.75em;
-      width: $width;
+  }
 
-      .block{
-        float: right;
-        width: 46%;
-        padding: 0 0 0 2*$gap;
-        margin-right: -2*$gap;
-        position: relative;
-        border-radius: 3px;
-        background-color: wheat;
-        .item{max-height: 0;
+  .word{
+    overflow: hidden;
+    margin-top: 2*$gap;
+    margin-left: -23.75em;
+    width: $width;
+
+    .block{
+      float: right;
+      width: 46%;
+      padding: 0 0 0 0;
+      margin-right: 0;
+      margin-bottom: -2em;
+      position: relative;
+      border-radius: 2px;
+      background-color: #ffffff;
+
+      .plus{
+
+        height: 33px;
+        width: 33px;
+        background-image: url("../img/ok.png");
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        position: absolute;
+        top: 0.35em;
+        left: 0.5em;
+
+
+      }
+
+
+
+      .item{max-height: 0;
         transition: 0.75s all ease;}
-        .item.open{max-height: 15em}
-        .arrow-e,
-        .arrow-w {
-          /*
-           * In Internet Explorer, The"border-style: dashed" will never be
-           * rendered unless "(width * 5) >= border-width" is true.
-           * Since "width" is set to "0", the "dashed-border" remains
-           * invisible to the user, which renders the border just like how
-           * "border-color: transparent" renders.
-           */
-          border-style: dashed;
-          border-color: transparent;
-          border-width: 0.53em;
-          display: -moz-inline-box;
-          display: inline-block;
-          /* Use font-size to control the size of the arrow. */
-          font-size: 12px;
-          height: 0;
-          line-height: 0;
-          position: relative;
-          vertical-align: middle;
-          width: 0;
 
-        }
-        .arrow-e {
-          border-right-width: 1em;
-          border-right-style: solid;
-          border-right-color: wheat;
-          right: 4.2em;
-        }
-      }
-
-
-      &:nth-child(even) .block{
-        float: left;
-        background-color: wheat;
-        padding: 0 0.1*$gap 0 0;
-        text-align: right;
-        .arrow-w {
-          border-left-width: 1em;
-          border-left-style: solid;
-          border-left-color: wheat;
-          left: 1.65em;
-        }
+      .item.open{max-height: 15em}
+      .arrow-e,
+      .arrow-w {
+        /*
+* In Internet Explorer, The"border-style: dashed" will never be
+* rendered unless "(width * 5) >= border-width" is true.
+* Since "width" is set to "0", the "dashed-border" remains
+* invisible to the user, which renders the border just like how
+* "border-color: transparent" renders.
+*/
+        border-style: dashed;
+        border-color: transparent;
+        border-width: 0.53em;
+        display: -moz-inline-box;
+        display: inline-block;
+        /* Use font-size to control the size of the arrow. */
+        font-size: 12px;
+        height: 0;
+        line-height: 0;
+        position: relative;
+        vertical-align: middle;
+        width: 0;
 
       }
+      .arrow-e {
+        border-right-width: 1em;
+        border-right-style: solid;
+        border-right-color: #ffffff;
+        right: 1.5em;
+        top: 0.75em;
+      }
+    }
+
+
+    &:nth-child(even) .block{
+      float: left;
+      padding: 0 0.1*$gap 0 0;
+      text-align: right;
+      background-position: top;
+      background-position: 310px 4px ;
+      .plus{
+
+        position: absolute;
+        left: 19.75em;
+
+
+
+      }
+      .arrow-w {
+        border-left-width: 1em;
+        border-left-style: solid;
+        border-left-color: #ffffff;
+        left: 1.65em;
+        top:0.75em;
+      }
+
+    }
+
+
 
     h2.title{
       font-size: 1.0em;
-     // border-bottom: 0.025em dashed yellow;
+      // border-bottom: 0.025em dashed yellow;
       color: gray;
+      position: relative;
+      top: -1.6em;
+      text-align: center;
+      text-shadow:-1px -1px 1px rgba(255,255,255,0.2),
+      1px 1px 1px rgba(255,255,255,0.2),
+      1px 1px 1px rgba(0,0,0,0.7);
+
+      margin-left: 3em;
+      margin-right: 3em;
+
     }
     .item{
       font-size: 1.15714em;
-      color: darkgrey;
-
+      color: gray;
+      position: relative;
+      top: -1.7em;
+      text-align: -moz-center;
+      text-shadow:-1px -1px 1px rgba(255,255,255,0.1),
+      1px 1px 1px rgba(255,255,255,0.1),
+      1px 1px 1px rgba(0,0,0,0.7);
 
 
     }
   }
-  }
+}
