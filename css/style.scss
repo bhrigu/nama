@@ -23,7 +23,7 @@ body{
 .header .logo {
   border: 2px solid #CFDEFF;
   border-radius: 96% 35%;
-  margin: 0 auto;
+  margin: -1em auto;
   overflow: hidden;
   width: 20%;
   img{max-width: 100%;
@@ -102,7 +102,17 @@ body{
     margin-top: 2*$gap;
     margin-left: -23.75em;
     width: $width;
+    .om{background-image: url("../img/om2.fw.png");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      height: 28px;
+      left: 23.2em;
+      position: relative;
+      top: 1.8em;
+      width: 27px;
 
+
+    }
     .block{
       float: right;
       width: 46%;
@@ -163,6 +173,8 @@ body{
         right: 1.5em;
         top: 0.75em;
       }
+
+
     }
 
 
@@ -195,7 +207,7 @@ body{
     h2.title{
       font-size: 1.0em;
       // border-bottom: 0.025em dashed yellow;
-      color: gray;
+      color: black;
       position: relative;
       top: -1.6em;
       text-align: center;
@@ -209,7 +221,7 @@ body{
     }
     .item{
       font-size: 1.15714em;
-      color: gray;
+      color: black;
       position: relative;
       top: -1.7em;
       text-align: -moz-center;
